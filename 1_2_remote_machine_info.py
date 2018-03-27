@@ -20,6 +20,7 @@ while True:
         # clears the console on raspberry pi
         print("\033c")
         print('Have a nice day')
+        print('\n')
         break
     else:
         get_remote_machine_info(userInput)
