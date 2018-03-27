@@ -7,11 +7,19 @@
 # ___________________________________________________________
 import socket
 
-def get_remote_machine_info():
-    remote_host = input('Enter the domain you want to get IP of: ')
+def get_remote_machine_info(domain):
+    remote_host = domain
     try:
         print ("IP address of {} {}".format(remote_host, socket.gethostbyname(remote_host)))
     except socket.error as err_msg:
         print ("{} {}".format(remote_host, err_msg))
 
-get_remote_machine_info()
+while True:
+    userInput = input('Enter the domain you want to get IP of (enter exit() to quit): ')
+    if userInput.lower() == 'exit()':
+        # clears the console on raspberry pi
+        print("\033c")
+        print('Have a nice day')
+        break
+    else:
+        get_remote_machine_info(userInput)
