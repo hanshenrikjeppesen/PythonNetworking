@@ -23,10 +23,10 @@ def convert_integer(data):
 
 while True:
     userInput = (input('\033[1;37;40mType in an Integer (0-10000) or "exit()" to quit: '))
-    if int(userInput) > 10000 or int(userInput) < 0:
-        print('The interger you have typed in is not valid, please try again')
-    elif userInput.lower() == 'exit()':
+    if userInput.lower() == 'exit()' :
         break
+    elif int(userInput) > 10000 or int(userInput) < 0:
+        print('The interger you have typed in is not valid, please try again')
     else:
         data = int(userInput)
         convert_integer(data)
