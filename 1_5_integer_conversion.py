@@ -22,7 +22,7 @@ def convert_integer(data):
     print("Original input: {} => \n\033[1;32;40mShort host byte order: {} \n\033[1;34;40mShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
 
 while True:
-    userInput = (input('Type in an Integer (0-10000) or "exit()" to quit: '))
+    userInput = (input('\033[1;37;40mType in an Integer (0-10000) or "exit()" to quit: '))
     if int(userInput) > 10000 or int(userInput) < 0:
         print('The interger you have typed in is not valid, please try again')
     elif userInput.lower() == 'exit()':
