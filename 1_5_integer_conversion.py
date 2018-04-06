@@ -9,10 +9,13 @@
 import socket
 
 def convert_integer(data):
+    whiteText = '\033[1;37;40m'
+    greenText = '\n\033[1;32;40m'
+    blueText = '\n\033[1;34;40m'
     print('\n')
 
     # 32 bit conversion Network To Host Long (ntohl) and Host to Network Long (htonl)
-    print("\033[1;37;40mOriginal input: {} => \n\033[1;32;40mLong host byte order: {} \n\033[1;34;40mLong network byte order: {}".format(data, socket.ntohl(data), socket.htonl(data)))
+    print(whiteText + "Original input: {} => " + greenText + "Long host byte order: {} " + blueText + "Long network byte order: {}".format(data, socket.ntohl(data), socket.htonl(data)))
 
     # separation of output for better readable
     print('\n')
