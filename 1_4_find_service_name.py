@@ -10,8 +10,17 @@ import socket
 
 def find_service_name():
     protocolname = 'tcp'
-    for port in [80, 25, 53, 8080]:
+    for port in [80, 25, 53, 8080, 22]:
         print("Port: {} => Service name: {}".format(port, socket.getservbyport(port, protocolname)))
 
 if __name__ == '__main__':
     find_service_name()
+
+'''
+Why?
+
+It canbe helpfull to determine what network services run on which ports using either the TCP or the UDP protocol. 
+We can do that by using getservbyport() socket class function from the socket library
+
+
+'''
