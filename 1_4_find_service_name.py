@@ -10,7 +10,7 @@ import socket
 
 def find_service_name():
     protocolname = 'tcp'
-    for port in [80, 25, 53, 8080]:
+    for port in [80, 25, 53, 8080, 433]:
         print("Port: {} => Service name: {}".format(port, socket.getservbyport(port, protocolname)))
 
 if __name__ == '__main__':
