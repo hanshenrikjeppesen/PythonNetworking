@@ -22,7 +22,7 @@ def convert_integer(data):
     print('\033[1;37;40m' + 20 * "#")
     print('\n')
     # 16 bit conversion  Network To Host Short (ntohs) and Host to Network Short (htons)
-    print("Original input: {} => \n\033[1;32;40mShort host byte order: {} \n\033[1;34;40mShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
+    print("Original input: {} => " + greenText + "Short host byte order: {} " + blueText + "Short network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
 
 redText ='\033[0;37;41m'
 
