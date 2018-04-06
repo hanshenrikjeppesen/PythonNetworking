@@ -21,15 +21,18 @@ def convert_integer(data):
     # 16 bit conversion  Network To Host Short (ntohs) and Host to Network Short (htons)
     print("Original input: {} => \n\033[1;32;40mShort host byte order: {} \n\033[1;34;40mShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
 
+redText ='\033[0;37;41m'
+
+
 while True:
     userInput = input('\033[1;37;40mType in an Integer (0-10000) or "exit()" to quit: ')
     while not userInput.isdigit():
         if userInput.lower() == 'exit()':
             exit()
         else:
-            userInput = input("Input must be numeric, please reenter: ")
+            userInput = input(redText + "Input must be numeric, please reenter: ")
     if int(userInput) > 10000 or int(userInput) < 0:
-        print('The integer you have typed in is not valid, please try again')
+        print(redText + 'The integer you have typed in is not valid, please try again')
     else:
         data = int(userInput)
         convert_integer(data)
