@@ -7,7 +7,7 @@
 # ___________________________________________________________
 
 import socket
-from binaascii import hexlify
+from binascii import hexlify
 
 def convert_ip4_address():
     for ip_addr in ['127.0.0.1', '192.168.3.14','192.168.1.1']:
