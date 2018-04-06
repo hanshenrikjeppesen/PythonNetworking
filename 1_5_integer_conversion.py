@@ -8,21 +8,23 @@
 
 import socket
 
-def convert_integer():
-    while True:
-        userInput = int(input('Type in an Integer (0-10000): '))
-        if userInput > 10000 or userInput < 0:
-            print('The interger you have typed in is not valid, please try again')
-        else:
-            data = userInput
-            break
+def convert_integer(data):
 
     # 32 bit conversion Network To Host Long (ntohl) and Host to Network Long (htonl)
     print("Original input: {} => \nLong host byte order: {} \nLong network byte order: {}".format(data, socket.ntohl(data), socket.htonl(data)))
 
+    print('\n')
+    print(20 * "#")
+    print('\n')
     # 16 bit conversion  Network To Host Short (ntohs) and Host to Network Short (htons)
+    print("Original input: {} => \n\e[39mShort host byte order: {} \nShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
 
-    print("Original input: {} => \nShort host byte order: {} \nShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
+while True:
+    userInput = int(input('Type in an Integer (0-10000): '))
+    if userInput > 10000 or userInput < 0:
+        print('The interger you have typed in is not valid, please try again')
+    else:
+        data = userInput
+        break
 
-    if __name__ == '__main__':
-        convert_integer()
+convert_integer(data)
