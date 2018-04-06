@@ -9,7 +9,7 @@
 import socket
 
 def convert_integer(data):
-
+    print('\n')
     # 32 bit conversion Network To Host Long (ntohl) and Host to Network Long (htonl)
     print("Original input: {} => \n\033[1;32;40mLong host byte order: {} \n\033[1;34;40mLong network byte order: {}".format(data, socket.ntohl(data), socket.htonl(data)))
 
