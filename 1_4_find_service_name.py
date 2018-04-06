@@ -19,7 +19,7 @@ if __name__ == '__main__':
 '''
 Why?
 
-It canbe helpfull to determine what network services run on which ports using either the TCP or the UDP protocol. 
+It canbe helpful to determine what network services run on which ports using either the TCP or the UDP protocol. 
 We can do that by using getservbyport() socket class function from the socket library
 
 
