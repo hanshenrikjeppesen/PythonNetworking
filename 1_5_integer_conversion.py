@@ -10,9 +10,11 @@ import socket
 
 def convert_integer(data):
     print('\n')
+
     # 32 bit conversion Network To Host Long (ntohl) and Host to Network Long (htonl)
     print("Original input: {} => \n\033[1;32;40mLong host byte order: {} \n\033[1;34;40mLong network byte order: {}".format(data, socket.ntohl(data), socket.htonl(data)))
 
+    # separation of output for better readable
     print('\n')
     print('\033[1;37;40m' + 20 * "#")
     print('\n')
@@ -28,3 +30,12 @@ while True:
         break
 
 convert_integer(data)
+
+'''
+WHY?
+When we design low-level network applications, it may be necessary to handle the low-level data transmission over the
+wire between two machines. This operation requires some sort of conversion of data from the native
+host operating system to the network format and vice versa. This is because each one has its 
+own specific representation of data
+
+'''
