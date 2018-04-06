@@ -26,7 +26,7 @@ while True:
     if userInput.isalpha():
         if userInput == 'exit()':
             print('Have a nice day')
-            break
+            exit()
         else:
             print('alpha is not allowed, please try again')
     elif int(userInput) > 10000 or int(userInput) < 0:
