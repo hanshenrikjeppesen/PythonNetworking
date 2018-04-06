@@ -29,7 +29,8 @@ while True:
             exit()
         else:
             print('alpha is not allowed, please try again')
-    elif int(userInput) > 10000 or int(userInput) < 0:
+
+    if int(userInput) > 10000 or int(userInput) < 0:
         print('The integer you have typed in is not valid, please try again')
     else:
         data = int(userInput)
