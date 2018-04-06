@@ -19,3 +19,16 @@ def convert_ip4_address():
 
 if __name__ == '__main__':
     convert_ip4_address()
+
+'''
+Why?
+
+When you deal with low-level network functions the normal string notation or dotted decimal notation  of IP addresses
+are not very useful. They need to be converted to the packed 32-bit binary format.
+
+HOW IT WORKS
+
+The three IPv4 addresses have been converted from a string to a 32-bit packed format using a for-in statement. 
+Additionally, the python function hexlify is called from the module that we also import binascii. 
+This is helping us repreent the binary data in a hexadecimal format
+'''
