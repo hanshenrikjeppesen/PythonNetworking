@@ -22,14 +22,16 @@ def convert_integer(data):
     print("Original input: {} => \n\033[1;32;40mShort host byte order: {} \n\033[1;34;40mShort network byte order: {}".format(data, socket.ntohs(data), socket.htons(data)))
 
 while True:
-    userInput = int(input('Type in an Integer (0-10000): '))
+    userInput = int(input('Type in an Integer (0-10000) or "exit()" to quit: '))
     if userInput > 10000 or userInput < 0:
         print('The interger you have typed in is not valid, please try again')
+    elif userInput.lower() == 'exit()':
+        break
     else:
         data = userInput
-        break
+        convert_integer(data)
 
-convert_integer(data)
+print('Have a nice day')
 
 '''
 WHY?
