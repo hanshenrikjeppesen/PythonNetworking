@@ -23,7 +23,7 @@ def convert_integer(data):
 
 while True:
     userInput = (input('Type in an Integer (0-10000) or "exit()" to quit: '))
-    if int(userInput) > 10000 or userInput < 0:
+    if int(userInput) > 10000 or int(userInput) < 0:
         print('The interger you have typed in is not valid, please try again')
     elif userInput.lower() == 'exit()':
         break
