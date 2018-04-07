@@ -38,7 +38,7 @@ def echo_server(port):
         data = client.recv(data_payload)
         if data:
             print("Data: %s" % data)
-            client.send(data)
+            client.send(data.upper())
             print("sent %s bytes back to %s" % (data, address))
         # end connection
         client.close()
