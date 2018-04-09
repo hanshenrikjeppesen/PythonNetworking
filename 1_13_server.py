@@ -15,7 +15,7 @@ import socket
 import sys
 import argparse
 
-host = '192.168.1.150'
+host = '192.168.1.151'
 data_payload = 2048
 backlog = 5
 
